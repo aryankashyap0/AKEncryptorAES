@@ -8,7 +8,7 @@ Usage
 
 (1) Encrypt/decrypt plain text message with Base64 encoding
 
-Encrypt)
+Encrypt: 🔒
 
 	NSString* encrypted = [AKEncryptorAES ak_encryptBase64String:@"Hello World!"
 											        keyString:@"somekey"
@@ -19,14 +19,14 @@ The output string is encoded with Base64.
 	message: @"Hello World!"
 	output : @"ggIfBjMpQb9n53cZsrs3uA=="
   
-if 'separateLines:' is NO, no CR/LF characters will be added.
-Otherwise a CR/LF pair will be added every 64 encoded chars.
+if 'separateLines:' is NO, no CR/LF characters will be added......
+Otherwise a CR/LF pair will be added every 64 encoded Chars.
 
 	NSString* decrypted = [AKEncryptorAES ak_decryptBase64String:encrypted
 											        keyString:key];
 
 
-(2) Encrypt/decrypt binary data
+(2) Encrypt/decrypt binary data 🔒
 
 	NSData* encryptedData = [AKEncryptorAES ak_encryptData:data
 											    keyData:key
@@ -39,7 +39,7 @@ Otherwise a CR/LF pair will be added every 64 encoded chars.
 The iv is called 'initailization vector' for CBC mode. it is abled to be set nil.
 
 
-(3) Generate iv
+(3) Generate iv 
 
 	NSData* iv = [AKEncryptorAES ak_generateIv];
 
@@ -55,7 +55,7 @@ It generates a 16 bytes random binary value. You can use this value for +ak_encr
 
 	NSData* bin = [AKEncryptorAES ak_dataForHexString:hexString];
   
-  Features
+  Features 🌅
 --------
 - Only support AES256/CBC/PKCS7padding
 - Base64 encoding is suported
